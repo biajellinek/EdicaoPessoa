@@ -1,0 +1,15 @@
+.navbar-custom {
+  background-color: #ab90e2; /* Medium Purple */
+  border: 2px solid white;
+  border-radius: 8px; /* Para as bordas arredondadas */
+}
+
+.breadcrumb-item a {
+  color: rgb(172, 3, 172) !important; 
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+ color: rgb(99, 3, 99) !important;
+ text-decoration: underline;
+}

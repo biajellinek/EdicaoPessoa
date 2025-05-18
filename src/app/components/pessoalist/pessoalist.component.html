@@ -1,0 +1,45 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <table border="1" class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pessoa of lista; let i = index">
+                <td *ngIf="pessoa.idade < 5">{{ pessoa.id }}</td>
+                <td *ngIf="pessoa.idade < 5">{{ pessoa.nome }}</td>
+                <td *ngIf="pessoa.idade < 5">{{ pessoa.idade }}</td>
+                <td *ngIf="pessoa.idade < 5">
+                  <button
+                    type="button"
+                    class="btn btn-edit"
+                    (click)="deletePessoa(pessoa.id)"
+                  >
+                    Deletar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-edit custom-btn"
+                    mdbRipple
+                    [routerLink]="['/pessoa/edit', pessoa.id]"
+                  >
+                    Editar
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
